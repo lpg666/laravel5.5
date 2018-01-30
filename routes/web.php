@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('users/{user}', function(User $user) {
     dd($user);
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
