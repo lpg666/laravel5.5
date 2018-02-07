@@ -17,11 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('users/{user}', function(User $user) {
-    dd($user);
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/user/{id}', function($id) {
+  return 'User '.$id; 
+});
