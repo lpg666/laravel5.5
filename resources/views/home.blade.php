@@ -1,5 +1,5 @@
-@extends('layouts.app')
+@extends('element-ui-demo.layouts.app')
 
 @section('content')
-    <example-component></example-component>
+    <demo-component></demo-component>
 @endsection
