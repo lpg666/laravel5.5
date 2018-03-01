@@ -13,14 +13,23 @@ use App\User;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+//
+//Auth::routes();
+//
+//Route::get('/home', 'HomeController@index')->name('home');
+//
+//Route::get('/user/{id}', function($id) {
+//  return 'User '.$id;
+//});
+Route::group(['domain' => 'www.laravel.com'], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/user/{id}', function($id) {
-  return 'User '.$id; 
+Route::group(['namespace' => 'Admin', 'domain' => 'admin.laravel.com'], function () {
+    Route::get('/home', 'HomeController@index');
 });
