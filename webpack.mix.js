@@ -16,3 +16,4 @@ mix.js('resources/assets/js/app.js', 'public/js')
 
 mix.js('resources/element-ui/js/app.js', 'public/element-ui/js')
   .extract(['vue'])
+    .version();

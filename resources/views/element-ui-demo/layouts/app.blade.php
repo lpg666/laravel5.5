@@ -75,8 +75,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('element-ui/js/manifest.js') }}"></script>
-    <script src="{{ asset('element-ui/js/vendor.js') }}"></script>
-    <script src="{{ asset('element-ui/js/app.js') }}"></script>
+    <script src="{{ mix('element-ui/js/manifest.js') }}"></script>
+    <script src="{{ mix('element-ui/js/vendor.js') }}"></script>
+    <script src="{{ mix('element-ui/js/app.js') }}"></script>
 </body>
 </html>

@@ -15,6 +15,7 @@ if (token) {
 }
 
 Vue.component('demo-component', require('./components/demo.vue'));
+Vue.component('menu-component', require('./components/menu.vue'));
 
 const app = new Vue({
   el: '#app'

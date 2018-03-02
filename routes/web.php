@@ -25,9 +25,11 @@ use App\User;
 //  return 'User '.$id;
 //});
 Route::group(['domain' => 'www.laravel.com'], function () {
+    Auth::routes();
     Route::get('/', function () {
         return view('welcome');
     });
+    Route::get('/home', 'HomeController@index')->name('home');
 });
 
 Route::group(['namespace' => 'Admin', 'domain' => 'admin.laravel.com'], function () {
